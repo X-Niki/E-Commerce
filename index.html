@@ -1,11 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="header-wrapper">
+            <div class="header-top">
+                <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
+                <a href="#">ShopNow</a>
+                <div class="lengvich menu">
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="header-title">
+                    <h1>Exclusive</h1>
+                </div>
+                <div class="header-menu">
+                    <a href="#">Home</a>
+                    <a href="#">Contact</a>
+                    <a href="#">About</a>
+                    <a href="#">Sign Up</a>
+                </div>
+                <div class="header-item">
+                    <form class="search">
+                        <input type="text" class="search-box" placeholder="What are you looking for?">
+                        <button type="submit" class="search-button"><img src="img/icon-search.svg"
+                                alt="search icon"></button>
+                    </form>
+                    <a href="#"><img src="img/icon-like.svg" alt="like icon"></a>
+                    <a href="#"><img src="img/icon-buy.svg" alt="buy icon"></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section1">
+        <div class="container">
+            <div class="section1-position">
+                <div class="section1-left">
+                    <ul>
+                        <li><a href="#">Woman’s Fashion</a></li>
+                        <li><a href="#">Men’s Fashion</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Home & Lifestyle</a></li>
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">Sports & Outdoor</a></li>
+                        <li><a href="#">Baby’s & Toys</a></li>
+                        <li><a href="#">Groceries & Pets</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                    </ul>
+                </div>
+                <div class="section1-right">
+                    <div class="slides">
+                        <img src="img/banner.jpg" alt="banner">
+                        <img src="img/banner.jpg" alt="banner">
+                        <img src="img/banner.jpg" alt="banner">
+                        <img src="img/banner.jpg" alt="banner">
+                        <img src="img/banner.jpg" alt="banner">
+                    </div>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="container">
+            <div class="section2-position">
+                <div class="title-block">
+                    <div class="block"></div>
+                    <h2>Today’s</h2>
+                </div>
+                <div class="timer">
+                    <h3>Flash Sales</h3>
+                    <div class="list-timer">
+                        <div class="list-item-timer">
+                            <p>Days</p> <span id="days">00</span>
+                        </div>
+                        <span class="timer-point">:</span>
+                        <div class="list-item-timer">
+                            <p>Hours</p> <span id="hours">00</span>
+                        </div>
+                        <span class="timer-point">:</span>
+                        <div class="list-item-timer">
+                            <p>Minutes</p> <span id="minutes">00</span>
+                        </div>
+                        <span class="timer-point">:</span>
+                        <div class="list-item-timer">
+                            <p>Seconds</p><span id="seconds">00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="list-item">
+                        <div class="list-item-img">
+                            <img src="img/sale1.jpg" alt="Sale">
+                        </div>
+                        <div class="list-item-icon">
+                            <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                            <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                        </div>
+                        <div class="list-item-bottom">
+                            <h2>HAVIT HV-G92 Gamepad</h2>
+                            <p>$120 <s>$160</s></p>
+                            <div class="rating">
+                                <img src="img/sale-star.svg" alt="star icon">
+                                <p>(88)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-img">
+                            <img src="img/sale2.jpg" alt="Sale">
+                        </div>
+                        <div class="list-item-icon">
+                            <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                            <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                        </div>
+                        <div class="list-item-bottom">
+                            <h2>AK-900 Wired Keyboard</h2>
+                            <p>$960 <s>$1160</s></p>
+                            <div class="rating">
+                                <img src="img/sale-star4.svg" alt="star icon">
+                                <p>(88)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-img">
+                            <img src="img/sale3.jpg" alt="Sale">
+                        </div>
+                        <div class="list-item-icon">
+                            <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                            <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                        </div>
+                        <div class="list-item-bottom">
+                            <h2>IPS LCD Gaming Monitor</h2>
+                            <p>$370 <s>$400</s></p>
+                            <div class="rating">
+                                <img src="img/sale-star.svg" alt="star icon">
+                                <p>(99)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-item">
+                        <div class="list-item-img">
+                            <img src="img/sale4.jpg" alt="Sale">
+                        </div>
+                        <div class="list-item-icon">
+                            <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                            <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                        </div>
+                        <div class="list-item-bottom">
+                            <h2>S-Series Comfort Chair </h2>
+                            <p>$375 <s>$400</s></p>
+                            <div class="rating">
+                                <img src="img/sale-star4-5.svg" alt="star icon">
+                                <p>(99)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-red">
+                    <a href="#">View All Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section3">
+        <div class="container">
+            <div class="section3-position">
+                <div class="title-block">
+                    <div class="block"></div>
+                    <h2>Categories</h2>
+                </div>
+                <div class="title-block2">
+                    <h2>Browse By Category</h2>
+                    <div class="button">
+                        <button class="button-left"><img src="img/icons_arrow-left.svg" alt="left"></button>
+                        <button class="button-right"><img src="img/icons arrow-right.svg" alt="right"></button>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="list-item">
+                        <img src="img/icon-Phone.svg" alt="Phone">
+                        <p>Phones</p>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/icon-Computer.svg" alt="Computer">
+                        <p>Computers</p>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/icon-SmartWatch.svg" alt="SmartWatch">
+                        <p>SmartWatch</p>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/icon-Camera.svg" alt="Camera">
+                        <p>Camera</p>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/icon-Headphone.svg" alt="Headphone">
+                        <p>HeadPhones</p>
+                    </div>
+                    <div class="list-item">
+                        <img src="img/icon-Gamepad.svg" alt="Gamepad">
+                        <p>Gaming</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section4">
+        <div class="container">
+            <div class="title-block">
+                <div class="block"></div>
+                <h2>This Month</h2>
+            </div>
+            <div class="title-block2">
+                <h2>Best Selling Products</h2>
+                <div class="button-red">
+                    <a href="#">View All</a>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products1.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>The north coat</h2>
+                        <p>$260 <s>$360</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products2.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>Gucci duffle bag</h2>
+                        <p>$960 <s>$1160</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star4-5.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products3.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>RGB liquid CPU Cooler</h2>
+                        <p>$160 <s>$170</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star4-5.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products4.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>Small BookSelf</h2>
+                        <p>$360</p>
+                        <div class="rating">
+                            <img src="img/sale-star.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section5">
+        <div class="container">
+            <div class="position">
+                <div class="item-left">
+                    <div class="title">
+                        <h3>Categories</h3>
+                        <h2>Enhance Your Music Experience</h2>
+                    </div>
+                    <div class="list">
+                        <div class="list-item">
+                            <counter class="counter"><span class="counter-value">23</span><span class="counter-title">Hours</span></counter>
+                        </div>
+                        <div class="list-item">
+                            <counter class="counter"><span class="counter-value">05</span><span class="counter-title">Days</span></counter>
+                        </div>
+                        <div class="list-item">
+                            <counter class="counter"><span class="counter-value">59</span><span class="counter-title">Minutes</span></counter>
+                        </div>
+                        <div class="list-item">
+                            <counter class="counter"><span class="counter-value">35</span><span class="counter-title">Seconds</span></counter>
+                        </div>
+                    </div>
+                    <div class="button-red">
+                        <a href="#">Buy Now!</a>
+                    </div>
+                </div>
+                <div class="item-right">
+                    <div class="section5-img">
+                        <img src="img/jbl.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section6">
+        <div class="container">
+            <div class="title-block">
+                <div class="block"></div>
+                <h2>Our Products</h2>
+            </div>
+            <div class="title-block2">
+                <h2>Explore Our Products</h2>
+                <div class="button">
+                    <button class="button-left"><img src="img/icons_arrow-left.svg" alt="left"></button>
+                    <button class="button-right"><img src="img/icons arrow-right.svg" alt="right"></button>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products5.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>The north coat</h2>
+                        <p>$260 <s>$360</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products2.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>Gucci duffle bag</h2>
+                        <p>$960 <s>$1160</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star4-5.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products3.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>RGB liquid CPU Cooler</h2>
+                        <p>$160 <s>$170</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star4-5.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products4.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>Small BookSelf</h2>
+                        <p>$360</p>
+                        <div class="rating">
+                            <img src="img/sale-star.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list">
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products1.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>The north coat</h2>
+                        <p>$260 <s>$360</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products2.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>Gucci duffle bag</h2>
+                        <p>$960 <s>$1160</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star4-5.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products3.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>RGB liquid CPU Cooler</h2>
+                        <p>$160 <s>$170</s></p>
+                        <div class="rating">
+                            <img src="img/sale-star4-5.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-item">
+                    <div class="list-item-img">
+                        <img src="img/products4.jpg" alt="products">
+                    </div>
+                    <div class="list-item-icon">
+                        <a href="#"><img src="img/like-icon.svg" alt="like ikon"></a>
+                        <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
+                    </div>
+                    <div class="list-item-bottom">
+                        <h2>Small BookSelf</h2>
+                        <p>$360</p>
+                        <div class="rating">
+                            <img src="img/sale-star.svg" alt="star icon">
+                            <p>(65)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dot');
+        let index = 0;
+
+        function updateSlides() {
+            slides.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                index = i;
+                updateSlides();
+            });
+        });
+        setInterval(() => {
+            index = (index + 1) % dots.length;
+            updateSlides();
+        }, 3000);
+
+
+        function startCountdown(targetDate) {
+            const daysElement = document.getElementById('days');
+            const hoursElement = document.getElementById('hours');
+            const minutesElement = document.getElementById('minutes');
+            const secondsElement = document.getElementById('seconds');
+
+            function updateCountdown() {
+                const now = new Date();
+                const timeLeft = targetDate - now;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                daysElement.textContent = String(days).padStart(2, '0');
+                hoursElement.textContent = String(hours).padStart(2, '0');
+                minutesElement.textContent = String(minutes).padStart(2, '0');
+                secondsElement.textContent = String(seconds).padStart(2, '0');
+
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    daysElement.textContent = '00';
+                    hoursElement.textContent = '00';
+                    minutesElement.textContent = '00';
+                    secondsElement.textContent = '00';
+                }
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+        }
+
+        // Установите дату обратного отсчёта (например, 31 декабря 2025 года)
+        const targetDate = new Date('2025-07-25T00:00:00');
+        startCountdown(targetDate);
+    </script>
 </body>
+
 </html>

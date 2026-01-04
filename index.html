@@ -19,7 +19,11 @@
             <div class="header-top">
                 <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
                 <a href="#">ShopNow</a>
-                <div class="lengvich menu">
+                <div class="language-select">
+                    <select name="language">
+                        <option value="en">English</option>
+                        <option value="гф">Ukraine</option>
+                    </select>
                 </div>
             </div>
             <div class="header-bottom">
@@ -27,7 +31,7 @@
                     <h1>Exclusive</h1>
                 </div>
                 <div class="header-menu">
-                    <a href="#">Home</a>
+                    <a href="index.html" class="active">Home</a>
                     <a href="#">Contact</a>
                     <a href="#">About</a>
                     <a href="#">Sign Up</a>
@@ -85,25 +89,25 @@
             <div class="section2-position">
                 <div class="title-block">
                     <div class="block"></div>
-                    <h2>Today’s</h2>
+                    <h3>Today’s</h3>
                 </div>
                 <div class="timer">
-                    <h3>Flash Sales</h3>
+                    <h2>Flash Sales</h2>
                     <div class="list-timer">
                         <div class="list-item-timer">
-                            <p>Days</p> <span id="days">00</span>
+                            <p>Days</p> <span class="days">00</span>
                         </div>
                         <span class="timer-point">:</span>
                         <div class="list-item-timer">
-                            <p>Hours</p> <span id="hours">00</span>
+                            <p>Hours</p> <span class="hours">00</span>
                         </div>
                         <span class="timer-point">:</span>
                         <div class="list-item-timer">
-                            <p>Minutes</p> <span id="minutes">00</span>
+                            <p>Minutes</p> <span class="minutes">00</span>
                         </div>
                         <span class="timer-point">:</span>
                         <div class="list-item-timer">
-                            <p>Seconds</p><span id="seconds">00</span>
+                            <p>Seconds</p><span class="seconds">00</span>
                         </div>
                     </div>
                 </div>
@@ -117,7 +121,7 @@
                             <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
                         </div>
                         <div class="list-item-bottom">
-                            <h2>HAVIT HV-G92 Gamepad</h2>
+                            <h4>HAVIT HV-G92 Gamepad</h4>
                             <p>$120 <s>$160</s></p>
                             <div class="rating">
                                 <img src="img/sale-star.svg" alt="star icon">
@@ -134,7 +138,7 @@
                             <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
                         </div>
                         <div class="list-item-bottom">
-                            <h2>AK-900 Wired Keyboard</h2>
+                            <h4>AK-900 Wired Keyboard</h4>
                             <p>$960 <s>$1160</s></p>
                             <div class="rating">
                                 <img src="img/sale-star4.svg" alt="star icon">
@@ -151,7 +155,7 @@
                             <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
                         </div>
                         <div class="list-item-bottom">
-                            <h2>IPS LCD Gaming Monitor</h2>
+                            <h4>IPS LCD Gaming Monitor</h4>
                             <p>$370 <s>$400</s></p>
                             <div class="rating">
                                 <img src="img/sale-star.svg" alt="star icon">
@@ -168,7 +172,7 @@
                             <a href="#"><img src="img/Eye-icon.svg" alt="Eye icon"></a>
                         </div>
                         <div class="list-item-bottom">
-                            <h2>S-Series Comfort Chair </h2>
+                            <h4>S-Series Comfort Chair </h4>
                             <p>$375 <s>$400</s></p>
                             <div class="rating">
                                 <img src="img/sale-star4-5.svg" alt="star icon">
@@ -189,7 +193,7 @@
             <div class="section3-position">
                 <div class="title-block">
                     <div class="block"></div>
-                    <h2>Categories</h2>
+                    <h3>Categories</h3>
                 </div>
                 <div class="title-block2">
                     <h2>Browse By Category</h2>
@@ -231,7 +235,7 @@
         <div class="container">
             <div class="title-block">
                 <div class="block"></div>
-                <h2>This Month</h2>
+                <h3>This Month</h3>
             </div>
             <div class="title-block2">
                 <h2>Best Selling Products</h2>
@@ -319,31 +323,39 @@
                         <h3>Categories</h3>
                         <h2>Enhance Your Music Experience</h2>
                     </div>
-                    <div class="list">
-                        <div class="list-item">
-                            <counter class="counter"><span class="counter-value">23</span><span
-                                    class="counter-title">Hours</span></counter>
-                        </div>
-                        <div class="list-item">
-                            <counter class="counter"><span class="counter-value">05</span><span
-                                    class="counter-title">Days</span></counter>
-                        </div>
-                        <div class="list-item">
-                            <counter class="counter"><span class="counter-value">59</span><span
-                                    class="counter-title">Minutes</span></counter>
-                        </div>
-                        <div class="list-item">
-                            <counter class="counter"><span class="counter-value">35</span><span
-                                    class="counter-title">Seconds</span></counter>
-                        </div>
-                    </div>
+                    <div class="section5-counter">
+    <div class="list-item">
+        <div class="counter">
+            <span class="days counter-value">05</span>
+            <span class="counter-title">Days</span>
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="counter">
+            <span class="hours counter-value">23</span>
+            <span class="counter-title">Hours</span>
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="counter">
+            <span class="minutes counter-value">59</span>
+            <span class="counter-title">Minutes</span>
+        </div>
+    </div>
+    <div class="list-item">
+        <div class="counter">
+            <span class="seconds counter-value">35</span>
+            <span class="counter-title">Seconds</span>
+        </div>
+    </div>
+</div>
                     <div class="button-red">
                         <a href="#">Buy Now!</a>
                     </div>
                 </div>
                 <div class="item-right">
                     <div class="section5-img">
-                        <img src="img/jbl.svg" alt="">
+                        <img src="img/jbl.svg" alt="jbl Speakers">
                     </div>
                 </div>
             </div>
@@ -354,7 +366,7 @@
         <div class="container">
             <div class="title-block">
                 <div class="block"></div>
-                <h2>Our Products</h2>
+                <h3>Our Products</h3>
             </div>
             <div class="title-block2">
                 <h2>Explore Our Products</h2>
@@ -544,7 +556,7 @@
         <div class="container">
             <div class="title-block">
                 <div class="block"></div>
-                <h2>Featured</h2>
+                <h3>Featured</h3>
             </div>
             <div class="title-block2">
                 <h2>New Arrival</h2>
@@ -566,39 +578,170 @@
                 </div>
             </div>
     </section>
-    <script>
-        const slides = document.querySelector('.slides');
-        const dots = document.querySelectorAll('.dot');
-        let index = 0;
 
-        function updateSlides() {
-            slides.style.transform = `translateX(-${index * 100}%)`;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
+    <section class="section8">
+        <div class="container">
+            <div class="item-container">
+                <div class="item">
+                    <div class="point-border">
+                        <div class="point"> <img src="img/section8-1.png" alt="Delivery"> </div>
+                    </div>
+                    <h3>FREE AND FAST DELIVERY</h3>
+                    <p>Free delivery for all orders over $140</p>
+                </div>
+
+                <div class="item">
+                    <div class="point-border">
+                        <div class="point"> <img src="img/section8-2.png" alt="Service"> </div>
+                    </div>
+                    <h3>24/7 CUSTOMER SERVICE</h3>
+                    <p>Friendly 24/7 customer support</p>
+                </div>
+
+                <div class="item">
+                    <div class="point-border">
+                        <div class="point"> <img src="img/section8-3.png" alt="Guarantee"> </div>
+                    </div>
+                    <h3>MONEY BACK GUARANTEE</h3>
+                    <p>We return money within 30 days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="scroll-top">
+        <img src="img/arrow-up.png" alt="Up">
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-col">
+                    <p class="footer-logo">Exclusive</p>
+                    <h3 class="footer-title">Subscribe</h3>
+                    <p class="footer-text">Get 10% off your first order</p>
+                    <div class="subscribe-input">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">
+                            <img src="img/icon-send.png" alt="send">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Support</h3>
+                    <p class="footer-text">
+                        111 Bijoy sarani, Dhaka, <br>
+                        DH 1515, Bangladesh.
+                    </p>
+                    <p class="footer-text">exclusive@gmail.com</p>
+                    <p class="footer-text">+88015-88888-9999</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Account</h3>
+                    <ul class="footer-list">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Login / Register</a></li>
+                        <li><a href="#">Cart</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Shop</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Link</h3>
+                    <ul class="footer-list">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Download App</h3>
+                    <p class="footer-promo">Save $3 with App New User Only</p>
+                    <div class="download-container">
+                        <div class="qr-code">
+                            <img src="img/QrCode.png" alt="QR Code">
+                        </div>
+                        <div class="app-stores">
+                            <img src="img/GooglePlay.jpg" alt="Google Play">
+                            <img src="img/AppStore.jpg" alt="App Store">
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank" rel="noopener">
+                            <img src="img/icon-facebook.png" alt="Facebook">
+                        </a>
+                        <a href="https://x.com/" target="_blank" rel="noopener">
+                            <img src="img/icon-twitter.png" alt="Twitter">
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                            <img src="img/icon-instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://linkedin.com/" target="_blank" rel="noopener">
+                            <img src="img/icon-linkedin.png" alt="Linkedin">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Copyright Rimel 2022. All right reserved</p>
+        </div>
+    </footer>
+    <script>
+        const sliderLine = document.querySelector('.slides');
+        const slides = document.querySelectorAll('.slides img');
+        const dots = document.querySelectorAll('.dot');
+
+        let currentIndex = 0;
+
+        function updateSlider() {
+            const width = slides[0].clientWidth;
+            sliderLine.style.transform = `translateX(${-currentIndex * width}px)`;
+            dots.forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
             });
         }
-
-        dots.forEach((dot, i) => {
+        dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
-                index = i;
-                updateSlides();
+                currentIndex = index;
+                updateSlider();
             });
         });
         setInterval(() => {
-            index = (index + 1) % dots.length;
-            updateSlides();
-        }, 3000);
+            currentIndex++;
+            if (currentIndex >= slides.length) {
+                currentIndex = 0;
+            }
+            updateSlider();
+        }, 5000);
 
 
-        function startCountdown(targetDate) {
-            const daysElement = document.getElementById('days');
-            const hoursElement = document.getElementById('hours');
-            const minutesElement = document.getElementById('minutes');
-            const secondsElement = document.getElementById('seconds');
+        window.addEventListener('resize', updateSlider);
+
+
+        function startCountdown(containerSelector, targetDate) {
+            const container = document.querySelector(containerSelector);
+            const daysElement = container.querySelector('.days');
+            const hoursElement = container.querySelector('.hours');
+            const minutesElement = container.querySelector('.minutes');
+            const secondsElement = container.querySelector('.seconds');
 
             function updateCountdown() {
                 const now = new Date();
                 const timeLeft = targetDate - now;
+
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    return;
+                }
 
                 const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -609,22 +752,19 @@
                 hoursElement.textContent = String(hours).padStart(2, '0');
                 minutesElement.textContent = String(minutes).padStart(2, '0');
                 secondsElement.textContent = String(seconds).padStart(2, '0');
-
-                if (timeLeft <= 0) {
-                    clearInterval(interval);
-                    daysElement.textContent = '00';
-                    hoursElement.textContent = '00';
-                    minutesElement.textContent = '00';
-                    secondsElement.textContent = '00';
-                }
             }
 
             const interval = setInterval(updateCountdown, 1000);
+            updateCountdown();
         }
 
-        // Установите дату обратного отсчёта (например, 31 декабря 2025 года)
-        const targetDate = new Date('2025-07-25T00:00:00');
-        startCountdown(targetDate);
+
+        startCountdown('.section2', new Date('2027-01-01T00:00:00'));
+        startCountdown('.section5', new Date('2027-01-01T00:00:00'));
+    </script>
+    <script>const scrollBtn = document.querySelector('.scroll-top');
+        scrollBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        window.addEventListener('scroll', function () { if (window.pageYOffset > 300) { scrollBtn.style.display = 'flex'; } else { scrollBtn.style.display = 'none'; } }); 
     </script>
 </body>
 

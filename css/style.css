@@ -52,7 +52,7 @@
 
 .language-select {
     position: absolute;
-    right: 40px;
+    right: 4%;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -60,19 +60,18 @@
 }
 
 .language-select select {
-    background: transparent;    /* Прозрачный фон под цвет header-top */
-    color: #FAFAFA;             /* Почти белый цвет текста */
-    border: none;               /* Убираем рамку */
+    background: transparent;
+    color: #FAFAFA;
+    border: none;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     cursor: pointer;
     outline: none;
 }
 
-/* Цвет текста внутри выпадающего списка (чтобы не был белым на белом) */
 .language-select select option {
-    background-color: #000;     /* Черный фон выпадающего списка */
-    color: #fff;                /* Белый текст */
+    background-color: #000;
+    color: #fff;
 }
 
 .header-bottom {
@@ -83,6 +82,7 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .header-title {
@@ -100,32 +100,42 @@
     color: #000000;
 }
 
-.header-menu {
+.nav-menu {
     display: flex;
-    gap: 48px;
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
     width: 46%;
 }
 
-.header-menu a {
+.nav-menu li a {
     text-decoration: none;
-    font-family: var(--font-primary);
-    font-style: normal;
+    color: black;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-    color: #000000;
-    border-bottom: 1px solid transparent;
-    transition: 0.3s all;
+    transition: 0.3s;
 }
 
-.header-menu a:hover {
-    border-color: #12132A;
-    border-color: currentColor;
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    text-decoration: underline;
 }
 
-.header-menu a.active {
-    border-bottom: 2px solid black;
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
 }
 
 .header-item {
@@ -158,6 +168,34 @@
 .search button {
     border: none;
     background-color: #F5F5F5;
+}
+
+@media screen and (max-width: 996px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        padding: 15px 0;
+    }
 }
 
 
@@ -276,6 +314,18 @@
 .dot.active {
     background-color: #f70000;
     border-color: #ffffff;
+}
+
+@media screen and (max-width: 996px) {
+
+    .section1-position {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section1-right {
+        width: 70%;
+    }
 }
 
 /* Section2 */
@@ -947,6 +997,7 @@
     background-color: #DB4444;
     box-shadow: 0 0 20px rgba(219, 68, 68, 0.4);
 }
+
 .scroll-top {
     position: fixed;
     bottom: 40px;
@@ -1000,7 +1051,8 @@
     margin-bottom: 24px;
 }
 
-.footer-text, .footer-list li {
+.footer-text,
+.footer-list li {
     font-family: var(--font-primary);
     font-size: 16px;
     line-height: 24px;
@@ -1104,11 +1156,12 @@
         flex: 1 1 100%;
         text-align: center;
     }
-    
-    .app-download-area, .social-links {
+
+    .app-download-area,
+    .social-links {
         justify-content: center;
     }
-    
+
     .subscribe-form {
         max-width: 100%;
     }
@@ -1143,7 +1196,7 @@
     .footer {
         padding: 40px 0 20px 0;
     }
-    
+
     .footer-logo {
         font-size: 20px;
     }

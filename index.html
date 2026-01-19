@@ -22,7 +22,7 @@
                 <div class="language-select">
                     <select name="language">
                         <option value="en">English</option>
-                        <option value="гф">Ukraine</option>
+                        <option value="ua">Ukraine</option>
                     </select>
                 </div>
             </div>
@@ -30,11 +30,19 @@
                 <div class="header-title">
                     <h1>Exclusive</h1>
                 </div>
-                <div class="header-menu">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="#">Contact</a>
-                    <a href="#">About</a>
-                    <a href="#">Sign Up</a>
+                <ul class="nav-menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+
+                <div class="nav-icons">
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
                 <div class="header-item">
                     <form class="search">
@@ -324,31 +332,31 @@
                         <h2>Enhance Your Music Experience</h2>
                     </div>
                     <div class="section5-counter">
-    <div class="list-item">
-        <div class="counter">
-            <span class="days counter-value">05</span>
-            <span class="counter-title">Days</span>
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="counter">
-            <span class="hours counter-value">23</span>
-            <span class="counter-title">Hours</span>
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="counter">
-            <span class="minutes counter-value">59</span>
-            <span class="counter-title">Minutes</span>
-        </div>
-    </div>
-    <div class="list-item">
-        <div class="counter">
-            <span class="seconds counter-value">35</span>
-            <span class="counter-title">Seconds</span>
-        </div>
-    </div>
-</div>
+                        <div class="list-item">
+                            <div class="counter">
+                                <span class="days counter-value">05</span>
+                                <span class="counter-title">Days</span>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="counter">
+                                <span class="hours counter-value">23</span>
+                                <span class="counter-title">Hours</span>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="counter">
+                                <span class="minutes counter-value">59</span>
+                                <span class="counter-title">Minutes</span>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="counter">
+                                <span class="seconds counter-value">35</span>
+                                <span class="counter-title">Seconds</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="button-red">
                         <a href="#">Buy Now!</a>
                     </div>
@@ -765,6 +773,16 @@
     <script>const scrollBtn = document.querySelector('.scroll-top');
         scrollBtn.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
         window.addEventListener('scroll', function () { if (window.pageYOffset > 300) { scrollBtn.style.display = 'flex'; } else { scrollBtn.style.display = 'none'; } }); 
+    </script>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            hamburger.classList.toggle("is-active");
+        });
     </script>
 </body>
 

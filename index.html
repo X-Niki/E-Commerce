@@ -17,8 +17,12 @@
     <header class="header">
         <div class="header-wrapper">
             <div class="header-top">
-                <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
-                <a href="#">ShopNow</a>
+                <div>
+                    <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
+                </div>
+                <div>
+                    <a href="#">ShopNow</a>
+                </div>
                 <div class="language-select">
                     <select name="language">
                         <option value="en">English</option>
@@ -27,22 +31,42 @@
                 </div>
             </div>
             <div class="header-bottom">
+                <div class="hamburger" onclick="this.classList.toggle('active')" id="hamburger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
                 <div class="header-title">
                     <h1>Exclusive</h1>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                </ul>
+                <nav class="nav-menu">
+                    <ul class="main-nav-list">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Sign Up</a></li>
+                    </ul>
+
+                    <div class="mobile-categories">
+                        <hr>
+                        <div class="category-header" id="category-accordion-toggle">
+                        <p class="mobile-cat-title">Categories</p>
+                        <span class="category-icon">+</span>
+                        </div>
+                        <ul class="section1-left-list" id="mobile-category-list">
+                        <li><a href="#">Men’s Fashion</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Home & Lifestyle</a></li>
+                        <li><a href="#">Medicine</a></li>
+                        <li><a href="#">Sports & Outdoor</a></li>
+                        <li><a href="#">Baby’s & Toys</a></li>
+                        <li><a href="#">Groceries & Pets</a></li>
+                        <li><a href="#">Health & Beauty</a></li>
+                        </ul>
+                    </div>
+                </nav>
 
                 <div class="nav-icons">
-                    <div class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
                 </div>
                 <div class="header-item">
                     <form class="search">
@@ -60,7 +84,8 @@
         <div class="container">
             <div class="section1-position">
                 <div class="section1-left">
-                    <ul>
+                    <div class="category-overlay"></div>
+                    <ul class="category-list-sidebar">
                         <li><a href="#">Woman’s Fashion</a></li>
                         <li><a href="#">Men’s Fashion</a></li>
                         <li><a href="#">Electronics</a></li>
@@ -75,17 +100,11 @@
                 <div class="section1-right">
                     <div class="slides">
                         <img src="img/banner.jpg" alt="banner">
-                        <img src="img/banner.jpg" alt="banner">
-                        <img src="img/banner.jpg" alt="banner">
-                        <img src="img/banner.jpg" alt="banner">
-                        <img src="img/banner.jpg" alt="banner">
+                        <img src="img/banner1.avif" alt="banner">
+                        <img src="img/banner4.jfif" alt="banner">
+                        <img src="img/banner3.jfif" alt="banner">
                     </div>
-                    <div class="dots">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
+                    <div class="dots" id="dots-container">
                     </div>
                 </div>
             </div>
@@ -700,37 +719,45 @@
         </div>
     </footer>
     <script>
-        const sliderLine = document.querySelector('.slides');
-        const slides = document.querySelectorAll('.slides img');
-        const dots = document.querySelectorAll('.dot');
+        const slidesContainer = document.querySelector('.slides');
+        const allSlides = document.querySelectorAll('.slides img');
+        const dotsContainer = document.getElementById('dots-container');
 
         let currentIndex = 0;
+        function createDots() {
+            dotsContainer.innerHTML = '';
 
-        function updateSlider() {
-            const width = slides[0].clientWidth;
-            sliderLine.style.transform = `translateX(${-currentIndex * width}px)`;
-            dots.forEach((dot, index) => {
-                if (index === currentIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
+            allSlides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                });
+
+                dotsContainer.appendChild(dot);
             });
         }
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentIndex = index;
-                updateSlider();
+
+        function updateSlider() {
+
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
             });
-        });
+        }
+
+
+        createDots();
+
+
         setInterval(() => {
-            currentIndex++;
-            if (currentIndex >= slides.length) {
-                currentIndex = 0;
-            }
+            currentIndex = (currentIndex + 1) % allSlides.length;
             updateSlider();
         }, 5000);
-
 
         window.addEventListener('resize', updateSlider);
 
@@ -783,6 +810,18 @@
             navMenu.classList.toggle("active");
             hamburger.classList.toggle("is-active");
         });
+    </script>
+
+    <script>
+        const catToggle = document.getElementById('category-accordion-toggle');
+const catList = document.getElementById('mobile-category-list');
+
+if (catToggle) {
+    catToggle.addEventListener('click', () => {
+        catToggle.classList.toggle('active');
+        catList.classList.toggle('open');
+    });
+}
     </script>
 </body>
 

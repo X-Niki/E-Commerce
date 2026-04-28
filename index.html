@@ -718,6 +718,102 @@
             <p>&copy; Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categories = document.querySelectorAll('.section3 .list-item');
+    const btnLeft = document.querySelector('.button-left');
+    const btnRight = document.querySelector('.button-right');
+
+    function changeCategory(direction) {
+        let currentIndex = Array.from(categories).findIndex(item => item.classList.contains('active'));
+
+        if (currentIndex === -1) {
+            currentIndex = 0;
+        }
+
+        categories[currentIndex].classList.remove('active');
+
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % categories.length;
+        } else {
+            currentIndex = (currentIndex - 1 + categories.length) % categories.length;
+        }
+
+        const newActive = categories[currentIndex];
+        newActive.classList.add('active');
+
+        newActive.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+
+    categories.forEach(item => {
+        item.addEventListener('click', function() {
+            categories.forEach(cat => cat.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    if (btnRight) {
+        btnRight.addEventListener('click', () => changeCategory('next'));
+    }
+    if (btnLeft) {
+        btnLeft.addEventListener('click', () => changeCategory('prev'));
+    }
+});
+    </script>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    const productSection = document.querySelector('.section6');
+    
+    if (productSection) {
+        const lists = productSection.querySelectorAll('.list');
+        console.log('Найдено списков:', lists.length);
+
+        if (window.innerWidth <= 768 && lists.length > 1) {
+            const firstList = lists[0];
+            const secondList = lists[1];
+
+            while (secondList.firstChild) {
+                firstList.appendChild(secondList.firstChild);
+            }
+
+            secondList.remove();
+            console.log('Блоки объединены');
+        }
+
+        const mainList = productSection.querySelector('.list');
+        const btnLeft = productSection.querySelector('.button-left');
+        const btnRight = productSection.querySelector('.button-right');
+
+        if (mainList && btnLeft && btnRight) {
+            btnRight.addEventListener('click', () => {
+                mainList.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+            btnLeft.addEventListener('click', () => {
+                mainList.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+        }
+    }
+});
+    </script>
+
+    <script>
+        const categoryList = document.querySelector('.section3 .list');
+const btnLeft = document.querySelector('.button-left');
+const btnRight = document.querySelector('.button-right');
+
+if (btnRight && btnLeft) {
+    btnRight.addEventListener('click', () => {
+        categoryList.scrollBy({ left: 200, behavior: 'smooth' });
+    });
+
+    btnLeft.addEventListener('click', () => {
+        categoryList.scrollBy({ left: -200, behavior: 'smooth' });
+    });
+}
+    </script>
+
     <script>
         const slidesContainer = document.querySelector('.slides');
         const allSlides = document.querySelectorAll('.slides img');

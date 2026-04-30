@@ -1234,6 +1234,10 @@
     margin-top: 60px;
 }
 
+.section6 .button {
+    display: none;
+}
+
 .section6 .list-item-bottom p:nth-child(1) {
     font-family: var(--font-primary);
     font-style: normal;
@@ -1298,6 +1302,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .section6 .button {
+        display: flex;
+    }
+
     .section6 .list {
         display: flex;
         flex-direction: row;

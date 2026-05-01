@@ -731,8 +731,8 @@
     transition: 0.3s;
 }
 
-.button-red a:hover, 
-.button-red a:focus, 
+.button-red a:hover,
+.button-red a:focus,
 .button-red a:active {
     background: #000000;
 }
@@ -859,14 +859,14 @@
     height: auto;
 }
 
-.button-left img, 
+.button-left img,
 .button-right img {
     max-width: 24px;
     width: 100%;
     height: auto;
 }
 
-.button-left, 
+.button-left,
 .button-right {
     display: flex;
     align-items: center;
@@ -881,7 +881,7 @@
     transition: background-color 0.3s;
 }
 
-.button-left:hover, 
+.button-left:hover,
 .button-right:hover {
     background-color: #e0e0e0;
 }

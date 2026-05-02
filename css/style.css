@@ -183,6 +183,10 @@
     background-color: #F5F5F5;
 }
 
+input:focus-visible {
+    outline: none;
+}
+
 .search button {
     border: none;
     background-color: #F5F5F5;
@@ -1141,10 +1145,13 @@
 }
 
 .section5 .button-red {
-    background: #00FF66;
     margin-top: 40px;
     margin-left: 0;
     max-width: 171px;
+}
+
+.section5 .button-red a {
+    background: #00FF66;
 }
 
 .section5 .item-left {
@@ -1630,6 +1637,17 @@
     margin-bottom: 16px;
 }
 
+.footer-col .footer-text a {
+    color: #FAFAFA;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-col .footer-text a:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
 .footer-list {
     list-style: none;
     padding: 0;
@@ -1666,6 +1684,10 @@
 .subscribe-input input:focus::placeholder {
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+.subscribe-input input:focus-visible {
+    outline: none;
 }
 
 .subscribe-input button {
